@@ -1,1 +1,9 @@
-# EX6_GEOPY
+## Solução dos exercícios da sexta aula do curso GeoPY
+## Manipulação de dados matriciais (raster)
+
+Bibliotecas usadas: ee ; geemap ; geopandas ; numpy ; rasterio ; matplotlib ; 
+
+Funções aprendidas: ee.Authenticate() ; ee.Initialize() ; ee.ImageCollection() ; filterDate() ; getInfo() ; gpd.read_file() ; to_crs() ; centroid() ; np.dstack() ; ee.Geometry.Polygon() ; ee.Feature() ; filterBounds() ; filter() ; select() ; ee.batch.Export.image.toDrive()
+
+Conteúdos abordados/ explicação dos exercícios : 
+Este exercício tem como objetivo praticar a manipulação de dados raster com o GEE (Google Earth Engine). A atividade consiste em baixar uma imagem Sentinel 2, realizar o recorte dessa imagem e calcular o NDVI (Índice de Vegetação por Diferença Normalizada). Na primeira etapa (E1), o usuário deve autenticar e inicializar o GEE, buscar imagens da coleção "COPERNICUS/S2_SR" entre as datas de 2022-01-01 e 2022-05-22, e verificar quantas imagens foram encontradas. Em seguida, deve-se ler o shapefile "dis_sampa_23s.shp", utilizado para filtrar a coleção de imagens do GEE, e filtrar a coleção de imagens para obter apenas imagens com cobertura de nuvens inferior a 5%. Depois, é necessário selecionar e visualizar a primeira imagem da coleção filtrada e fazer o download das bandas de reflectância de superfície apenas. Na segunda etapa (E2), o usuário deve abrir e visualizar a imagem baixada em E1, sobrepondo a geometria dos limites dos distritos de São Paulo ("dis_sampa_23s.shp"), extrair o retângulo envolvente do distrito de Santana, recortar a imagem Sentinel com o retângulo envolvente extraído e salvar o resultado em um novo raster, e visualizar o recorte. Na terceira etapa (E3), deve-se ler a imagem recortada em E2 e visualizar o histograma de todas as bandas, criar novas variáveis para armazenar as bandas do vermelho e infravermelho, calcular e exportar como uma nova imagem o NDVI, e calcular o NDVI mínimo, máximo, médio e mediano para o distrito de Santana. 
